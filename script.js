@@ -6,5 +6,5 @@ const toggle=document.getElementById('motion');
 function reflect(){document.body.classList.toggle('paused',paused);toggle.setAttribute('aria-pressed',String(paused));toggle.textContent=paused?'Resume petals':'Pause petals'}
 reflect();toggle.addEventListener('click',()=>{paused=!paused;reflect();update()});
 let queued=false;const layers=[...document.querySelectorAll('[data-parallax]')];
-function update(){queued=false;for(const layer of layers){const box=layer.parentElement.getBoundingClientRect();layer.style.transform=(!paused&&!reduced.matches)?`translateY(${-box.top*Number(layer.dataset.parallax)}px)`:'none'}}
+function update(){queued=false;for(const layer of layers){const box=layer.parentElement.getBoundingClientRect();layer.style.transform=(!paused&&!reduced.matches)?`translateY(${Math.max(-20,Math.min(20,-box.top*Number(layer.dataset.parallax)))}px)`:'none'}}
 addEventListener('scroll',()=>{if(!queued){queued=true;requestAnimationFrame(update)}},{passive:true});reduced.addEventListener('change',()=>{paused=reduced.matches;reflect();update()});update();
