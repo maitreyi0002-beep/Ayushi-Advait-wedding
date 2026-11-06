@@ -1,0 +1,13 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Ayushi and Advait//Wedding//EN
+BEGIN:VEVENT
+UID:ayushi-advait-20270127
+DTSTAMP:20261106T000000Z
+DTSTART;VALUE=DATE:20270127
+DTEND;VALUE=DATE:20270130
+SUMMARY:Ayushi & Advait Wedding Celebrations
+LOCATION:Ramada by Wyndham Ahmedabad Narendra Modi Stadium Motera
+DESCRIPTION:Wedding celebrations 27-29 January 2027. Wedding on 29 January.
+END:VEVENT
+END:VCALENDAR
